@@ -36,7 +36,7 @@
 ||=>  Team Owl 
 ||=>  Blog Box Full 
 ||=>  Side Bar 
-||=>
+||=>  Blog Single Page 
 ||=>
 ||=>
 ||=>
@@ -59,7 +59,7 @@
     --greyBg: #f4f4f4;
     --orangeOpacity: #fff0d9;
     --purpleOpacity: #ac96d7;
-    --blueOpacity : #f6f9ff;
+    --blueOpacity: #f6f9ff;
     --bgOpacity: rgba(0, 0, 0, .6);
     --borderColor: rgb(226, 226, 226);
 }
@@ -2076,13 +2076,12 @@ textarea:active {
 }
 
 
-@media screen and (max-width:767px)
-{
+@media screen and (max-width:767px) {
     .blogBoxFull .blogBoxFullFooter {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .blogBoxFull .blogBoxFullshare {
         margin-top: 10px;
     }
@@ -2118,6 +2117,22 @@ textarea:active {
 
 .sideBox .sideTitle a:hover {
     color: var(--mainColor);
+}
+
+.sideBox .sideTitle span {
+    position: relative;
+}
+
+.sideBox .sideTitle span::after {
+    display: block;
+    content: "";
+    width: calc( 100% + 5px );
+    height: 5px;
+    background: var(--orangeOpacity);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    z-index: -1;
 }
 
 .categories .catsList a {
@@ -2237,11 +2252,11 @@ textarea:active {
     margin-bottom: 20px;
 }
 
-.SideNewsletter input:focus , 
+.SideNewsletter input:focus,
 .SideNewsletter input:active {
     background: var(--purpleOpacity);
     border-color: var(--secondColor);
-        color: var(--white);
+    color: var(--white);
 }
 
 .SideNewsletter .agree {
@@ -2274,8 +2289,8 @@ textarea:active {
     font-size: 14px;
 }
 
-.SideNewsletter .subscribeBtn:hover ,
-.SideNewsletter .subscribeBtn:active ,
+.SideNewsletter .subscribeBtn:hover,
+.SideNewsletter .subscribeBtn:active,
 .SideNewsletter .subscribeBtn:focus {
     background: var(--mainColor);
 }
@@ -2302,7 +2317,7 @@ textarea:active {
 }
 
 .sidePost .data {
-    width: calc( 100% - 80px );
+    width: calc(100% - 80px);
 }
 
 .sidePost h3 {
@@ -2329,13 +2344,13 @@ textarea:active {
 }
 
 .galleryBox .gallerImage {
-    width: calc( 25% - 2px );
+    width: calc(25% - 2px);
     position: relative;
     overflow: hidden;
     margin: 1px;
 }
 
-.galleryBox .gallerImage > img {
+.galleryBox .gallerImage>img {
     width: 100%;
     height: 100%;
 }
@@ -2427,3 +2442,130 @@ textarea:active {
     font-weight: bold;
     color: var(--mainColor);
 }
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||     Blog Single Page      ||========================*/
+/*==========================||---------------------------||========================*/
+
+.BlogPostPage {
+    border: 1px solid var(--grey);
+    margin-bottom: 30px;
+}
+
+.BlogPostPage .dataContent {
+    padding: 20px;
+}
+
+.BlogPostPage .ImgBox img {
+    width: 100%;
+}
+
+.BlogPostPage .date {
+    margin-bottom: 12px;
+    color: var(--mainColor);
+}
+
+.BlogPostPage .articleTitle {
+    font-size: 27px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.BlogPostPage p {
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.BlogPostPage ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.BlogPostPage .dataContent li {
+    position: relative;
+    padding-left: 15px;
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color:var(--text);
+}
+
+.BlogPostPage .dataContent li::After {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--mainColor);
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.BlogPostPage .articlePostFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    border-top: 1px solid var(--grey);
+    padding: 20px;
+}
+
+.BlogPostPage .articlePostFooter .articlePostTags ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.BlogPostPage .articlePostFooter .articlePostTags li {
+    margin-right: 10px;
+}
+
+.BlogPostPage .articlePostFooter .articlePostTags li a {
+    background: var(--grey);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--text);
+    text-transform: capitalize;
+    font-size: 13px;
+    display: flex;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare {
+    display: flex;
+    align-items: center;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare label {
+    margin: 0;
+    position: relative;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare label::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: var(--orangeOpacity);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare ul {
+    display: flex;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare a {
+    color: var(--text);
+    margin: 0 10px;
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare a:hover {
+    color: var(--mainColor);
+}
+
