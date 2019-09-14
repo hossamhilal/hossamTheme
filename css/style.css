@@ -37,8 +37,8 @@
 ||=>  Blog Box Full 
 ||=>  Side Bar 
 ||=>  Blog Single Page 
-||=>
-||=>
+||=>  Add Comment 
+||=>  SideBar Author 
 ||=>
 ||=>
 ||=>
@@ -2126,7 +2126,7 @@ textarea:active {
 .sideBox .sideTitle span::after {
     display: block;
     content: "";
-    width: calc( 100% + 5px );
+    width: calc(100% + 5px);
     height: 5px;
     background: var(--orangeOpacity);
     position: absolute;
@@ -2491,7 +2491,7 @@ textarea:active {
     line-height: 25px;
     font-size: 16px;
     margin-bottom: 5px;
-    color:var(--text);
+    color: var(--text);
 }
 
 .BlogPostPage .dataContent li::After {
@@ -2534,17 +2534,12 @@ textarea:active {
     display: flex;
 }
 
-.BlogPostPage .articlePostFooter .articlePostShare {
-    display: flex;
-    align-items: center;
-}
-
-.BlogPostPage .articlePostFooter .articlePostShare label {
-    margin: 0;
+.BlogPostPage .articlePostFooter label {
     position: relative;
+    font-weight: 600;
 }
 
-.BlogPostPage .articlePostFooter .articlePostShare label::after {
+.BlogPostPage .articlePostFooter label::after {
     display: block;
     content: "";
     width: 100%;
@@ -2562,10 +2557,181 @@ textarea:active {
 
 .BlogPostPage .articlePostFooter .articlePostShare a {
     color: var(--text);
-    margin: 0 10px;
+    margin: 0 10px 0 0;
+    background: var(--grey);
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
 .BlogPostPage .articlePostFooter .articlePostShare a:hover {
+    color: var(--white);
+    background: var(--mainColor);
+}
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||        Add Comment        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.addCommentWrapper h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.addCommentWrapper input,
+.addCommentWrapper textarea {
+    border-radius: 0;
+    background: var(--grey);
+}
+
+.addCommentWrapper .textareaField,
+.addCommentWrapper textarea {
+    height: 200px;
+}
+
+.addCommentWrapper .inputField::after {
+    left: 0;
+}
+
+.addCommentWrapper .inputField.focused::after {
+    width: 100%;
+}
+
+.addCommentWrapper .addCommentBtn {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid var(--mainColor);
+    background: var(--mainColor);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.addCommentWrapper .addCommentBtn:hover {
+    background: var(--secondColor);
+    border-color: var(--secondColor);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||        SideBar Author     ||========================*/
+/*==========================||---------------------------||========================*/
+
+.sideAuthor {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid var(--grey);
+}
+
+.sideAuthor .sideAuthorView {
+    position: relative;
+}
+
+.sideAuthor .sideAuthorViewCover {
+    height: 160px;
+    margin-bottom: 45px;
+}
+
+.sideAuthor .sideAuthorViewCover img {
+    width: 100%;
+    height: 100%;
+}
+
+.sideAuthor .sideAuthorViewAvatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    border: 1px solid var(--grey);
+    position: absolute;
+    bottom: -60px;
+    left: calc(50% - 60px);
+    background: var(--white);
+}
+
+.sideAuthor .sideAuthorViewAvatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.sideAuthor .sideAuthorViewData {
+    text-align: center;
+    padding: 20px;
+}
+
+.sideAuthor .sideAuthorViewData h3 {
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.sideAuthor .sideAuthorViewData h5 {
+    font-size: 15px;
+    color: var(--text);
+}
+
+.sideAuthor .sideAuthorViewData p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.sideAuthor .authorSocial {
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideAuthor .authorSocial ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideAuthor .authorSocial a {
+    margin: 0 10px;
+    color: var(--black);
+}
+
+.sideAuthor .authorSocial a:hover {
     color: var(--mainColor);
+}
+
+.sideAuthor .viewProfile {
+    font-size: 13px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 15px auto 0;
+    color: var(--secondColor);
+    position: relative;
+}
+
+.sideAuthor .viewProfile::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: var(--orangeOpacity);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+}
+
+.sideAuthor .viewProfile:hover {
+    color:var(--black);
+}
+
+.sideAuthor .viewProfile:hover::after {
+    height: 11px;
+    width: calc( 100% + 20px );
+    left: -10px;
+    transition: all .7s ease-in-out;
 }
 
