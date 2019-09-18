@@ -104,6 +104,30 @@
     });
 
 
+    //RELATED POSTS OWL 
+    $('.relatedOwl').owlCarousel({
+        // rtl: true,
+        items:30,
+        margin: 20,
+        autoplay: true,
+        loop: true,
+        nav: true,
+        dots:false,
+        navText: ["<i class='icofont-long-arrow-right'></i>", "<i class='icofont-long-arrow-left'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+
+
     // INPUT FOCUS ANIMATION 
     $('.inputField input').focus(function(){
         $(this).parent('.inputField').addClass('focused');
@@ -130,6 +154,21 @@
     // SOCIAL HEIGHT EQUAL TO WIDTH 
     $('.socialFollow .followBox li').each(function() {
         $(this).height($(this).width());
+    });
+
+    // MACY GALLERY
+    var macy = Macy({
+        container: '.galleryPage',
+        trueOrder: false,
+        waitForImages: false,
+        margin: 5,
+        columns: 4,
+        breakAt: {
+            1200: 4,
+            940: 3,
+            520: 2,
+            400: 1
+        }
     });
 
     // SIDE BAR CALENDER 
