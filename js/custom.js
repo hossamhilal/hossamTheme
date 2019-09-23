@@ -144,6 +144,21 @@
         $(this).parent('.inputField').removeClass('focused');
     });
 
+    $('.inputField textarea').focus(function(){
+        $(this).parent('.inputField').addClass('focused');
+    });
+
+    $('.inputField textarea').each(function() { 
+        if ($(this).val() != "") {
+            $(this).parent('.inputField').addClass('focused');   
+        }
+    });
+
+    $('.inputField textarea').focusout(function(){
+        if($(this).val() === "")
+        $(this).parent('.inputField').removeClass('focused');
+    });
+
 
     // STOP DEFULT FOR MIXITUP FILTER ANCHOR  
     $('.portfolioFilterList a').click(function(e){
@@ -155,6 +170,24 @@
     $('.socialFollow .followBox li').each(function() {
         $(this).height($(this).width());
     });
+
+
+    // SHOW ALL CATEGORIES 
+    $('.catPageAllCats .showAllCats').on('click', function(){
+        $('.catPageAllCats .allCatsContent').toggleClass('show');
+        $('.catPageAllCats .catsOverlay').addClass('show');  
+        setTimeout(function(){
+            $('body').addClass('stopScroll');
+        }, 200); 
+    });
+
+    // HIDE ALL CATEGORIES 
+    $('.catPageAllCats .catsOverlay').on('click', function(){
+        $(this).removeClass('show');
+        $('.catPageAllCats .allCatsContent').toggleClass('show'); 
+        $('body').removeClass('stopScroll');  
+    });
+    
 
     // MACY GALLERY
     var macy = Macy({

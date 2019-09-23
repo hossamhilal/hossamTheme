@@ -45,7 +45,7 @@
 ||=>  Individual Post 
 ||=>  Cat Page All Cats
 ||=>  Gallery Page 
-||=>
+||=>  Author Page 
 ||=>
 ||=>
 ||=>
@@ -2264,6 +2264,11 @@ textarea:active {
     text-transform: capitalize;
 }
 
+.popularTags .tagsBox a:hover {
+    background: var(--secondColor);
+    color: var(--white);
+}
+
 .SideNewsletter .newsletterBox {
     padding: 5px 20px 20px;
 }
@@ -2290,8 +2295,8 @@ textarea:active {
 
 .SideNewsletter input:focus,
 .SideNewsletter input:active {
-    background: var(--purpleOpacity);
-    border-color: var(--secondColor);
+    background: var(--orangeOpacity);
+    border-color: var(--mainColor);
     color: var(--white);
 }
 
@@ -2398,9 +2403,8 @@ textarea:active {
     width: 100%;
     height: 100%;
     background: var(--bgOpacity);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    padding: calc(50% - 12.5px);
     overflow: hidden;
     transform: translateX(-105%);
     transition: all .5s ease-in-out;
@@ -3002,7 +3006,7 @@ textarea:active {
 }
 
 .relatedOwl .item {
-    padding : 20px 0;
+    padding: 20px 0;
 }
 
 .relatedPost {
@@ -3099,6 +3103,10 @@ textarea:active {
     margin-bottom: 30px;
 }
 
+.individualPost:hover {
+    box-shadow: 0px 0px 38px 0px rgba(78, 78, 78, 0.1);
+}
+
 .individualPost img {
     height: 250px;
     width: 100%;
@@ -3168,6 +3176,9 @@ textarea:active {
     color: var(--mainColor);
 }
 
+.individualPost:hover .readMoreArrow {
+    color: var(--mainColor);
+}
 
 
 /*==========================||---------------------------||========================*/
@@ -3180,18 +3191,62 @@ textarea:active {
 
 .catPageAllCats .allCatsHead {
     margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid var(--grey);
-    padding: 20px;
+    border: 0;
+    padding: 0;
 }
 
 .catPageAllCats .allCatsHead h4 {
+    font-size: 21px;
     font-weight: bold;
+    line-height: 1.5;
     text-transform: uppercase;
-    font-size: 20px;
-    margin: 0;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catPageAllCats .allCatsHead span {
+    position: relative;
+}
+
+.catPageAllCats .allCatsHead span::after {
+    display: block;
+    content: "";
+    width: calc(100% + 5px);
+    height: 5px;
+    background: var(--orangeOpacity);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    z-index: -1;
+}
+
+.catPageAllCats .allCatsHead .showAllCats {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text);
+    background: var(--grey);
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.catPageAllCats .catsOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    z-index: 8;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.catPageAllCats .catsOverlay.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all .5s ease-in-out;
 }
 
 .catPageAllCats .showAllCats {
@@ -3201,11 +3256,68 @@ textarea:active {
 .catPageAllCats .showAllCats:hover {
     color: var(--mainColor);
     cursor: pointer;
+    background: var(--orangeOpacity);
 }
 
 .catPageAllCats .allCatsContent {
     padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    background: var(--white);
+    box-shadow: 0 0 20px 13px rgba(0, 0, 0, .1);
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.catPageAllCats .allCatsContent.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all .5s ease-in-out;
+}
+
+.catPageAllCats .allCatsContent .sideTitle {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    padding: 0 0 20px 0px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catPageAllCats .allCatsContent .sideTitle span {
+    position: relative;
+}
+
+.catPageAllCats .allCatsContent .sideTitle span::after {
+    display: block;
+    content: "";
+    width: calc(100% + 5px);
+    height: 5px;
+    background: var(--orangeOpacity);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    z-index: -1;
+}
+
+.catPageAllCats .allCatsContent .row {
+    margin: 0;
     border: 1px solid var(--grey);
+    border-width: 1px 0 0px 1px;
+}
+
+.catPageAllCats .allCatsContent .col-12 {
+    padding: 0;
 }
 
 .catPageAllCats .allCatsContent a {
@@ -3216,9 +3328,45 @@ textarea:active {
     color: var(--text);
     text-transform: capitalize;
     border-bottom: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
     font-size: 15px;
 }
 
+.catPageAllCats .allCatsContent a:hover {
+    color: var(--mainColor);
+}
+
+.catPageAllCats .allCatsContent a span {
+    border-radius: 50%;
+    font-size: 13px;
+    background: var(--grey);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catPageAllCats .allCatsContent a:hover span {
+    background: var(--mainColor);
+    color: var(--white);
+}
+
+@media screen and (max-width:768px) {
+    .catPageAllCats .allCatsContent {
+        padding: 20px;
+    }
+
+    .catPageAllCats .allCatsContent .row {
+        overflow-y: auto;
+        height: 330px;
+    }
+
+    .catPageAllCats .allCatsContent .sideTitle {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+}
 
 
 
@@ -3250,10 +3398,7 @@ textarea:active {
     right: 0;
     bottom: 0;
     background: var(--bgOpacity);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: block;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -3262,21 +3407,23 @@ textarea:active {
     will-change: transform;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
+    padding-top: calc(50% - 20px);
 }
 
 .galleryPage .gallareyItem .overlay a {
     position: absolute;
-    left: calc( 50% - 20px );
+    left: calc(50% - 20px);
     opacity: 0;
     width: 40px;
     height: 40px;
+    z-index: 2;
 }
 
-.galleryPage .gallareyItem .overlay  img {
+.galleryPage .gallareyItem .overlay img {
     width: 40px;
 }
 
-.galleryPage .gallareyItem .overlay a:hover + img {
+.galleryPage .gallareyItem .overlay a:hover+img {
     filter: invert(0.4) sepia(1) saturate(20) hue-rotate(360deg) brightness(1.2);
 }
 
@@ -3284,38 +3431,95 @@ textarea:active {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transform: none;
-            transform: none;
+    transform: none;
     visibility: visible;
     transition-delay: 0s;
 }
 
-/* @media screen and (max-width:425px) {
-    .galleryPage .gallareyItem {
-        width: 100%;
-    }
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||         Author Page       ||========================*/
+/*==========================||---------------------------||========================*/
+
+.autorPageBox .row {
+    margin: 0;
 }
 
-@media (min-width:575px) and (max-width:767px) {
-    .galleryPage .gallareyItem {
-        width: 50%;
-    }
+.autorPageBox .sideAuthorViewCover {
+    height: 100%;
+    margin: 0;
 }
 
-@media (min-width:768px) and (max-width:992px) {
-    .galleryPage .gallareyItem {
-        width: 33.333%;
-    }
+.autorPageBox .sideAuthorView {
+    height: 100%;
+    min-height: 200px;
 }
 
-@media (min-width:1024px)  {
-    .galleryPage .gallareyItem {
-        width: 25%;
-    }
+.autorPageBox .sideAuthorView::After {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--orangeOpacity);
+    z-index: 0;
+    opacity: .6;
 }
 
+.autorPageBox .sideAuthorViewAvatar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
 
-@media (min-width:1500px)  {
-    .galleryPage .gallareyItem {
-        width: 20%;
-    }
-} */
+.autorPageBox .sideAuthorViewData {
+    text-align: left;
+}
+
+.autorPageBox .sideAuthorViewData p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.autorPageBox .authorSocial {
+    justify-content: end;
+}
+
+.autorPageBox .authorSocial a {
+    margin: 0 20px 0 0;
+}
+
+.autorPageBox .sideAuthorViewData h5 {
+    color: var(--secondColor);
+    text-transform: capitalize;
+}
+
+.autorPageBox .sideAuthorViewData h3 {
+    color: var(--mainColor);
+}
+
+.autorPageBox .col-12 {
+    padding: 0;
+}
+
+.autorPageBox .authorPostCout {
+    padding: 0;
+    margin: 20px 0 0 0;
+    list-style: none;
+    font-size: 15px;
+    color: var(--text);
+    text-transform: capitalize;
+}
+
+.autorPageBox .authorPostCout label {
+    color: var(--secondColor);
+    margin-right: 15px;
+    min-width: 65px;
+}
