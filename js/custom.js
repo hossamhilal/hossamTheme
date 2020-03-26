@@ -127,6 +127,44 @@
         }
     });
 
+    //RELATED POSTS OWL 
+    $('.workOwl').owlCarousel({
+        // rtl: true,
+        items:30,
+        margin: 20,
+        autoplay: true,
+        loop: true,
+        nav: false,
+        dots:true,
+        navText: ["<i class='icofont-long-arrow-right'></i>", "<i class='icofont-long-arrow-left'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2 ,
+                dotsEach:2
+            },
+            1000: {
+                items: 4,
+                dotsEach: 1
+            }
+        }
+    });
+
+    $('.product-owl').owlCarousel({
+        items:1,
+        nav:true,
+        rtl:true,
+        margin:0,
+        dots: true,
+        smartSpeed: 2500,
+        autoplay: true ,
+        loop: true,
+        navText: ["<i class='icofont-block-right'></i>", "<i class='icofont-block-left'></i>"],
+
+    });
+
 
     // INPUT FOCUS ANIMATION 
     $('.inputField input').focus(function(){
