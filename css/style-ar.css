@@ -1,0 +1,210 @@
+body {
+    direction: rtl;
+    text-align: initial;
+}
+
+.searchBtn {
+    margin: 0 0 0 40px;
+}
+
+.mainHeaderDataBtns .orangeBtn {
+    margin: 0 0 0 30px;
+}
+
+.discover .flexBtns .readMore {
+    margin: 0 0 0 50px;
+}
+
+.discover .list li img {
+    margin: 0 0 0 5px;
+}
+
+.discover .flexBtns .watch .watchIcon {
+    margin: 0 0 0 20px;
+}
+
+.discover h5 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    height: 17px;
+}
+
+.readMoreArrow {
+    margin-right: auto;
+    transform: rotate(180deg);
+}
+
+.services .serviceBoxIcon::after {
+    right: auto;
+    left: -16px;
+}
+
+.serviceBox:hover .serviceBoxIcon::after {
+    right: auto;
+    left: 0;
+}
+
+.portfolioFilterList li::after {
+    right: auto;
+    left: 0;
+}
+
+.portfolioBox:hover .hoverBlock .readMoreArrow {
+    margin: 0 0 0 auto;
+}
+
+.owl-carousel {
+    direction: ltr;
+}
+
+.customCheckbox {
+    margin: 0 0 0 10px;
+}
+
+.subscribeForm .orangeBtn {
+    margin: 0 10px 0 0;
+}
+
+.footer .contactInfo li {
+    padding: 0 19px 0 0;
+}
+
+.footer .contactInfo li img {
+    left: auto;
+    right: 0;
+}
+
+.autorPageBox .authorPostCout label {
+    margin: 0 0 0 15px;
+}
+
+.autorPageBox .authorSocial a {
+    margin: 0 0 0 20px;
+}
+
+.individualPost h4 span {
+    display: flex;
+    align-items: center;
+}
+
+.individualPost h4 span i {
+    margin-left: 5px;
+}
+
+.BlogPostPage .dataContent li {
+    padding: 0 15px 0 0;
+}
+
+.BlogPostPage .dataContent li::After {
+    left: auto;
+    right: 0;
+}
+
+.socialFollow .followBox a {
+    border-right: 0;
+    border-left: 1px solid var(--grey);
+}
+
+.BlogPostPage .articlePostFooter .articlePostShare a ,
+.BlogPostPage .articlePostFooter .articlePostTags li {
+    margin: 0 0 0 10px;
+}
+
+.addCommentWrapper h2::after {
+    right: -5px;
+    left: auto;
+}
+
+.commentsWrapperTitle::after {
+    right: -5px;
+    left: auto;
+}
+
+.singleCommentData {
+    padding: 0 10px 0 0;
+}
+
+.singleCommentData .replyBtn {
+    display: flex;
+    align-items: center;
+}
+
+.singleCommentData .replyBtn i {
+    transform: rotate(180deg);
+    margin: -3px 5px 0 0;
+}
+
+.relatedWrapper .owl-nav {
+    right: auto;
+    left: 0;
+}
+
+.relatedWrapper .owl-nav div {
+    margin: 0 20px 0 0;
+}
+
+.relatedPost {
+    text-align: right;
+}
+
+.singleCommentData h5 {
+    display: flex;
+}
+
+.singleCommentData h5 i {
+    margin-left: 5px;
+}
+
+.blogBoxFull h6 span {
+    display: flex;
+}
+
+.blogBoxFullFooter .commentsCount {
+    display: flex;
+    align-items: center;
+}
+
+.paginationWrapper .page-item:first-of-type  ,
+.paginationWrapper .page-item:last-of-type {
+    transform: rotate(180deg);
+}
+
+.blogBoxFull h6 span i ,
+.blogBoxFullFooter .commentsCount i ,
+.seoFeature .list li img ,
+.servicePage-features .list li img {
+    margin: 0 0 0 5px;
+}
+
+.servicePage-features .appFeatureNum {
+    margin: 0 0 0 10px;
+}
+
+.service-step .stepNum {
+    right: auto;
+    left: 13px;
+}
+
+.why-us .why-list .icon {
+    margin: 0 0 0 15px;
+}
+
+.graphic-design-description .sectionContent .graphic-description-content .row {
+    border-width: 1px 1px 0 0;
+}
+
+.graphic-design-description .graphic-description-content .col-12 {
+    border-width: 0 0 1px 1px;
+}
+
+.graphic-description-box b {
+    right: auto;
+    left: 2px;
+}
+
+.optimization-box-content li i ,
+.hosting-plan li i {
+    margin: 0 0 0 10px;
+}

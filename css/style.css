@@ -556,7 +556,7 @@ textarea:active {
 
 .discover {
     margin-bottom: 20px;
-    text-align: left;
+    text-align: initial;
 }
 
 .discover .row {
@@ -1807,7 +1807,7 @@ textarea:active {
     padding: 0px 15px;
     width: 100%;
     margin-bottom: 30px;
-    text-align: left;
+    text-align: initial;
 }
 
 .searchModal .orangeBtn {
@@ -2315,7 +2315,7 @@ textarea:active {
     display: flex;
     font-size: 15px;
     color: var(--text);
-    text-transform: capitalize;
+    text-transform: uppercase;
     border-radius: 25px;
 }
 
@@ -2674,7 +2674,7 @@ textarea:active {
 
     .BlogPostPage p {
         font-size: 14px;
-        text-align: left;
+        text-align: initial;
     }
 
     .BlogPostPage .articlePostFooter {
@@ -3563,11 +3563,11 @@ textarea:active {
 }
 
 .autorPageBox .sideAuthorViewData {
-    text-align: left;
+    text-align: initial;
 }
 
 .autorPageBox .sideAuthorViewData p {
-    text-align: left;
+    text-align: initial;
     font-size: 14px;
 }
 
@@ -4153,6 +4153,15 @@ textarea:active {
     max-width: 34px;
 }
 
+.why-us .why-list li:hover .icon {
+    background: var(--secondColor);
+    transition: all .3s ease-in-out;
+}
+
+.why-us .why-list li:hover .icon img {
+    filter: brightness(0) invert(1);
+}
+
 @media (min-width:1200px) {
     .why-us .why-list {
         padding-left: 80px;
@@ -4712,7 +4721,7 @@ textarea:active {
 
 .optimization-box-content {
     padding: 25px;
-    text-align: left;
+    text-align: initial;
 }
 
 .optimization-box-content p {
