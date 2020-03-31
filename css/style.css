@@ -5286,3 +5286,40 @@ textarea:active {
         margin-bottom: 20px;
     }
 }
+
+.catPagePosts .row {
+    margin: 0;
+}
+
+.catPagePosts .col-12 {
+    padding: 5px;
+}
+
+.catPagePosts .individualPost {
+    margin: 0;
+}
+
+.catPagePosts .individualPost h2 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.catPagePosts .individualPost p {
+    font-size: 13px;
+}
+
+.catPagePosts .individualPost .individualPostData {
+    padding: 12px;
+}
+
+.catPagePosts .individualPost img {
+    height: 200px;
+}
+
+.catPagePosts .individualPostShare {
+    height: 200px;
+}
+
+.individualPost h4 {
+    font-size: 12px;
+}
