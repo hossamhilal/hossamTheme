@@ -5288,7 +5288,7 @@ textarea:active {
 }
 
 .catPagePosts .row {
-    margin: 0;
+    margin: 0 -5px;
 }
 
 .catPagePosts .col-12 {
