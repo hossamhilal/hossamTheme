@@ -5323,3 +5323,7 @@ textarea:active {
 .individualPost h4 {
     font-size: 12px;
 }
+
+.portfolioWrapper.services-page {
+    background: transparent;
+}

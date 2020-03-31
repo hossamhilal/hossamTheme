@@ -197,18 +197,10 @@
         $(this).parent('.inputField').removeClass('focused');
     });
 
-
-    // STOP DEFULT FOR MIXITUP FILTER ANCHOR  
-    $('.portfolioFilterList a').click(function(e){
-        e.preventDefault();
-    });
-
-
     // SOCIAL HEIGHT EQUAL TO WIDTH 
     $('.socialFollow .followBox li').each(function() {
         $(this).height($(this).width());
     });
-
 
     // SHOW ALL CATEGORIES 
     $('.catPageAllCats .showAllCats').on('click', function(){
@@ -255,9 +247,10 @@
     });
     
 
-
-    
-
+    // STOP DEFULT FOR MIXITUP FILTER ANCHOR  
+    $('.portfolioFilterList a').click(function(e){
+        e.preventDefault();
+    });
 
     // MIX IT UP FILTER 
     var mixer = mixitup('.portfolioFilterContent', {
@@ -269,11 +262,6 @@
         }
     });
 
-
-    
-
-
-    
    
 })(jQuery);
 
