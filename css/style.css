@@ -1845,11 +1845,11 @@ textarea:active {
 .internalHeader {
     background: url(../images/internalHeader.png) no-repeat;
     background-size: 100% 100%;
-    padding: 30px 0 100px 0;
+    padding: 30px 0 70px 0;
 }
 
 .pageInfo {
-    padding: 100px 0 0;
+    padding: 70px 0 0;
     text-align: center;
     color: var(--white);
     width: 650px;
@@ -1858,7 +1858,7 @@ textarea:active {
 }
 
 .pageInfo h1 {
-    font-size: 45px;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing: 5px;
     margin-bottom: 25px;
@@ -1897,7 +1897,7 @@ textarea:active {
 /*==========================||---------------------------||========================*/
 
 .bradCrumbBox {
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
